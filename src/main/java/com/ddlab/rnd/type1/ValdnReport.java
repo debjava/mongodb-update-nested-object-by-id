@@ -1,4 +1,4 @@
-package com.ddlab.rnd;
+package com.ddlab.rnd.type1;
 
 import java.util.List;
 
@@ -12,7 +12,7 @@ import lombok.Data;
 
 @Data
 @Entity(value = "vldnreports", noClassnameStored = true)
-public class Report {
+public class ValdnReport {
 	
 	@Id
 	private String _id = new ObjectId().toString();
@@ -20,9 +20,11 @@ public class Report {
 	private String name;
 	@Property("type")
 	private String type;
+	@Property("rid")
+	private String reportId;
 	
 	@Embedded
-	private List<Details> detailsList;
+	private List<VldnReportDetails> detailsList;
 	
 	
 }
