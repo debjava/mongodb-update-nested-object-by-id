@@ -1,0 +1,1 @@
+db.reports.update({ "detailsList._id": "5fc21530727aab0a2c1190ef" }, { $set: { "detailsList.$.validation": "Some New Name" } })
